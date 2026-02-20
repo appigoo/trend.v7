@@ -37,7 +37,7 @@ def get_ai_advice_auto(sym, info1, info15, vix):
     prompt = f"你是操盤手，分析{sym}。VIX:{vix:.2f}, 短線:{info1['trend']}, 長線:{info15['trend']}。請給出40字內操作建議。"
     try:
         response = client.models.generate_content(
-            model="gemini-1.5-flash", 
+            model="gemini-2.0-flash", 
             contents=prompt
         )
         return response.text
